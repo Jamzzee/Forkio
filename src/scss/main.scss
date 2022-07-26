@@ -1,0 +1,11 @@
+@import "./helpers/base";
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 16px;
+}
+
+@import "./sections/global";
