@@ -1,0 +1,20 @@
+{
+  "name": "forkio",
+  "version": "1.0.0",
+  "description": "step project \"forkio\"",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/Jamzze/forkio.git"
+  },
+  "author": "Vitalii Chalbash and Victoria Demidova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/Jamzze/forkio/issues"
+  },
+  "homepage": "https://gitlab.com/Jamzze/forkio#readme"
+}
