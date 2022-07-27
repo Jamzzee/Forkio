@@ -53,11 +53,13 @@ const createScss = () => {
 		.pipe(browserSync.stream())
 }
 
-const createJS = () => {
+const createJs = () => {
 	gulp
 		.src(path.src.js)
+		.pipe(concat('main.js'))
+		.pipe(fulpif(path.isProd, uglify()))
 		.pipe(minifyjs())
-		.pipe(rename('script.min.js'))
+		.pipe(rename('scripts.min.js'))
 		.pipe(gulp.dest(path.dist.js))
 		.pipe(browserSync.stream())
 }
@@ -65,10 +67,10 @@ const createImg = () => {
 	gulp
 		.src(path.src.img)
 		.pipe(imageMin())
-    	.pipe(gulp.dest(path.dist.img))
-		.pipe(browserSync.stream())
+		.pipe(gulp.dest(path.dist.img))
 }
 
+//Functions clean and watcher
 
 const createClean = () => {
 	gulp
@@ -85,5 +87,13 @@ const watcher = () => {
 		}
 	})
 
+	gulp.watch('./index.html').on('change', browserSync.reload)
 	gulp.watch(path.src.scss, createScss).on('change', browserSync.reload)
+	gulp.watch(path.src.js, createJs).on('change', browserSync.reload)
+	gulp.watch(path.src.img, createImg).on('change', browserSync.reload)
 }
+
+// Gulp tasks
+
+gulp.task('dev', gulp.series(createScss, createJs, watcher))
+gulp.task('build', gulp.series(createClean, createScss, createJs, createImg))
