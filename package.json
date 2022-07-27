@@ -6,7 +6,7 @@
   "main": "main.js",
   "scripts": {
     "dev": "gulp dev",
-    "build": "gulp uild --prod"
+    "build": "gulp build --prod"
   },
   "repository": {
     "type": "git",

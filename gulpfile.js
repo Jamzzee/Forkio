@@ -34,7 +34,6 @@ const path = {
 		this.isProd = process.argv.includes("--prod")
 		this.isDev = !this.isProd
 	},
-
 }
 
 path.setEnv()
@@ -48,6 +47,9 @@ const createScss = () => {
 		.pipe(gulpIf(path.isProd, autoPrefix({
 			cascade: false
 		})))
+		.pipe(gulpIf(path.isProd, cleanCss({
+			compatibility: 'ie8'
+		})))
 		.pipe(rename("style.min.css"))
 		.pipe(gulp.dest(path.dist.css))
 		.pipe(browserSync.stream())
@@ -57,7 +59,7 @@ const createJs = () => {
 	gulp
 		.src(path.src.js)
 		.pipe(concat('main.js'))
-		.pipe(fulpif(path.isProd, uglify()))
+		.pipe(gulpIf(path.isProd, uglify()))
 		.pipe(minifyjs())
 		.pipe(rename('scripts.min.js'))
 		.pipe(gulp.dest(path.dist.js))
@@ -69,6 +71,7 @@ const createImg = () => {
 		.pipe(imageMin())
 		.pipe(gulp.dest(path.dist.img))
 }
+
 
 //Functions clean and watcher
 
