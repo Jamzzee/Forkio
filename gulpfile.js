@@ -56,10 +56,17 @@ const createScss = () => {
 const createJS = () => {
 	gulp
 		.src(path.src.js)
+		.pipe(minifyjs())
+		.pipe(rename('script.min.js'))
+		.pipe(gulp.dest(path.dist.js))
+		.pipe(browserSync.stream())
 }
 const createImg = () => {
 	gulp
 		.src(path.src.img)
+		.pipe(imageMin())
+    	.pipe(gulp.dest(path.dist.img))
+		.pipe(browserSync.stream())
 }
 
 
@@ -69,6 +76,7 @@ const createClean = () => {
 			allowEmpty: true
 		}).pipe(clean());
 }
+
 
 const watcher = () => {
 	browserSync.init({
