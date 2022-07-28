@@ -17,15 +17,15 @@
 <ul>
 <li>Heder menu</li>
 <li>Drop-down menu</li>
-<li>Section **People Are Talking About Fork**</li>
+<li>Section __People Are Talking About Fork__</li>
 </ul>
 
 ## Vitalii Chalbash
 <ul>
 <li>Project build</li>
-<li>Section **Revolutionary Editor**</li>
-<li>Section **Here is what you get**</li>
-<li>Section **Fork Subscription Pricing**</li>
+<li>Section __Revolutionary Editor__</li>
+<li>Section __Here is what you get__</li>
+<li>Section __Fork Subscription Pricing__</li>
 </ul>
 
 # Установка
