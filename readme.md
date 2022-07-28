@@ -26,7 +26,7 @@
 <li>Project build</li>
 **bold**
 <li style="font-weight: bold">Section Revolutionary Editor</li>
-<li>Section __Here is what you get__</li>
+<li>Section ***Here is what you get***</li>
 <li>Section __Fork Subscription Pricing__</li>
 </ul>
 
