@@ -9,10 +9,8 @@
 </ul>
 
 # Участники проекта
-<ul>
-<li>***Vitalii Chalbash***</li>
-<li>***Victoria Demydova***</li>
-</ul>
+***Vitalii Chalbash***
+***Victoria Demydova***
 
 
 # Обязанности
@@ -26,7 +24,8 @@
 ## Vitalii Chalbash
 <ul>
 <li>Project build</li>
-<li>Section __Revolutionary Editor__</li>
+**bold**
+<li style="font-weight: bold">Section Revolutionary Editor</li>
 <li>Section __Here is what you get__</li>
 <li>Section __Fork Subscription Pricing__</li>
 </ul>
