@@ -9,7 +9,7 @@
 </ul>
 
 # Участники проекта
-***Vitalii Chalbash***
+***Vitalii Chalbash*** </br>
 ***Victoria Demydova***
 
 # Обязанности
@@ -17,7 +17,7 @@
 <ul>
 <li>Heder menu</li>
 <li>Drop-down menu</li>
-<li>Section __People Are Talking About Fork__</li>
+<li>Section <bold>People Are Talking About Fork</bold></li>
 </ul>
 
 ## Vitalii Chalbash
