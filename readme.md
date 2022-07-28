@@ -9,7 +9,7 @@
 </ul>
 
 # Участники проекта
-***Vitalii Chalbash***
+***Vitalii Chalbash*** <br>
 ***Victoria Demydova***
 
 
@@ -18,16 +18,15 @@
 <ul>
 <li>Heder menu</li>
 <li>Drop-down menu</li>
-<li>Section <bold>People Are Talking About Fork</bold></li>
+<li>Section <b>People Are Talking About Fork</b></li>
 </ul>
 
 ## Vitalii Chalbash
 <ul>
 <li>Project build</li>
-**bold**
-<li style="font-weight: bold">Section Revolutionary Editor</li>
-<li>Section ***Here is what you get***</li>
-<li>Section __Fork Subscription Pricing__</li>
+<li>Section <b>Revolutionary Editor</b></li>
+<li>Section <b>Here is what you get</b></li>
+<li>Section <b>Fork Subscription Pricing</b></li>
 </ul>
 
 # Установка
