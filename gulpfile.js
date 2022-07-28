@@ -40,47 +40,47 @@ path.setEnv()
 
 //Create functions-tasks
 
-const createScss = () => {
+const createScss = () =>
 	gulp
-		.src(path.src.scss)
-		.pipe(sass().on('error', sass.logError))
-		.pipe(gulpIf(path.isProd, autoPrefix({
-			cascade: false
-		})))
-		.pipe(gulpIf(path.isProd, cleanCss({
-			compatibility: 'ie8'
-		})))
-		.pipe(rename("style.min.css"))
-		.pipe(gulp.dest(path.dist.css))
-		.pipe(browserSync.stream())
-}
+	.src(path.src.scss)
+	.pipe(sass().on('error', sass.logError))
+	.pipe(gulpIf(path.isProd, autoPrefix({
+		cascade: false
+	})))
+	.pipe(gulpIf(path.isProd, cleanCss({
+		compatibility: 'ie8'
+	})))
+	.pipe(rename("style.min.css"))
+	.pipe(gulp.dest(path.dist.css))
+	.pipe(browserSync.stream())
 
-const createJs = () => {
+
+const createJs = () =>
 	gulp
-		.src(path.src.js)
-		.pipe(concat('main.js'))
-		.pipe(gulpIf(path.isProd, uglify()))
-		.pipe(minifyjs())
-		.pipe(rename('scripts.min.js'))
-		.pipe(gulp.dest(path.dist.js))
-		.pipe(browserSync.stream())
-}
-const createImg = () => {
+	.src(path.src.js)
+	.pipe(concat('main.js'))
+	.pipe(gulpIf(path.isProd, uglify()))
+	.pipe(minifyjs())
+	.pipe(rename('scripts.min.js'))
+	.pipe(gulp.dest(path.dist.js))
+	.pipe(browserSync.stream())
+
+const createImg = () =>
 	gulp
-		.src(path.src.img)
-		.pipe(imageMin())
-		.pipe(gulp.dest(path.dist.img))
-}
+	.src(path.src.img)
+	.pipe(imageMin())
+	.pipe(gulp.dest(path.dist.img))
+
 
 
 //Functions clean and watcher
 
-const createClean = () => {
+const createClean = () =>
 	gulp
-		.src(path.dist.self, {
-			allowEmpty: true
-		}).pipe(clean());
-}
+	.src(path.dist.self, {
+		allowEmpty: true
+	}).pipe(clean());
+
 
 
 const watcher = () => {
