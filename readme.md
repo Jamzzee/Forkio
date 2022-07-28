@@ -9,8 +9,11 @@
 </ul>
 
 # Участники проекта
-***Vitalii Chalbash*** </br>
-***Victoria Demydova***
+<ul>
+<li>***Vitalii Chalbash***</li>
+<li>***Victoria Demydova***</li>
+</ul>
+
 
 # Обязанности
 ## Victoria Demydova 
