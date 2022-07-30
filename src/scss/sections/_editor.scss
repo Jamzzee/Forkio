@@ -3,6 +3,10 @@
 	background-color: $bg-white;
 	padding-bottom: 70px;
 
+	@include for-size(tablet) {
+		margin-bottom: 90px;
+	}
+
 	.editor__title {
 		font-family: $main-font;
 		font-weight: 700;
@@ -11,6 +15,11 @@
 		text-transform: uppercase;
 		text-align: center;
 		margin-bottom: 35px;
+
+		@include for-size(tablet) {
+			font-size: 2.6em;
+			margin-bottom: 32px;
+		}
 	}
 
 	.editor__subtitle {
@@ -21,6 +30,10 @@
 		line-height: 1.5em;
 		text-align: center;
 		margin-bottom: 13px;
+
+		@include for-size(tablet) {
+			margin-bottom: 18px;
+		}
 	}
 
 	.editor__stats {
@@ -70,7 +83,7 @@
 }
 
 .editor__body {
-	padding-top: 100px;
+	padding-top: 98px;
 	padding-bottom: 33px;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -90,18 +103,57 @@
 		grid-area: editor__picture;
 	}
 
+	@include for-size(tablet) {
+		padding-top: 60px;
+		padding-bottom: 0;
+		justify-items: center;
+		align-items: center;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			"editor__title"
+			"editor__info"
+			"editor__picture";
+
+		.editor__info {
+			grid-area: editor__info;
+			justify-self: start;
+		}
+
+		.editor__title {
+			grid-area: editor__title;
+		}
+
+		.editor__picture {
+			grid-area: editor__picture;
+			justify-self: end;
+		}
+	}
+
 
 	.editor__info {
 		padding-left: 92px;
 		margin-right: 50px;
 
+		@include for-size(tablet) {
+			padding-left: 10px;
+		}
+
 		.editor__block {
 			@include flex(center, flex-start);
 			margin-bottom: 33px;
 
+			@include for-size(tablet) {
+				margin-bottom: 60px;
+			}
+
 			.item-editor__image {
 				@include flex;
 				width: 100%;
+
+				@include for-size(tablet) {
+					justify-content: center;
+					width: 50%;
+				}
 			}
 
 
@@ -114,6 +166,11 @@
 					font-size: 1em;
 					line-height: 1.3em;
 					margin-bottom: 16px;
+
+					@include for-size(tablet) {
+						margin-bottom: 0;
+						line-height: 1.2em;
+					}
 				}
 
 				.item-editor__text {
@@ -140,7 +197,13 @@
 		font-weight: 700;
 		color: $secondary-purple;
 		font-size: 3em;
-		margin-right: 18px;
+		margin-bottom: 18px;
+
+		@include for-size(tablet) {
+			text-align: center;
+			font-size: 2.6em;
+			margin-bottom: 52px;
+		}
 	}
 
 	.editor__picture img {
