@@ -159,7 +159,7 @@
 
 	@include for-size(phone) {
 		padding-top: 32px;
-		padding-bottom: 0;
+		padding-bottom: 6px;
 		align-items: center;
 		grid-template-columns: 1fr;
 		grid-template-areas:
