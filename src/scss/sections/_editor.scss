@@ -4,13 +4,17 @@
 	padding-bottom: 70px;
 
 	@include for-size(tablet) {
-		margin-bottom: 90px;
+		margin-bottom: 98px;
+	}
+
+	@include for-size(phone) {
+		margin-bottom: 78px;
 	}
 
 	.editor__title {
 		font-family: $main-font;
 		font-weight: 700;
-		color: $secondary-purple;
+		color: #635C73;
 		font-size: 3.3em;
 		text-transform: uppercase;
 		text-align: center;
@@ -19,6 +23,12 @@
 		@include for-size(tablet) {
 			font-size: 2.6em;
 			margin-bottom: 32px;
+		}
+
+		@include for-size(phone) {
+			font-size: 1.6em;
+			line-height: 1.2em;
+			margin-bottom: 26px;
 		}
 	}
 
@@ -34,10 +44,22 @@
 		@include for-size(tablet) {
 			margin-bottom: 18px;
 		}
+
+		@include for-size(phone) {
+			text-align: center;
+			font-size: 0.8em;
+			line-height: 1.1em;
+			padding-inline: 22px;
+			margin-bottom: 36px;
+		}
 	}
 
 	.editor__stats {
 		@include flex;
+
+		@include for-size(phone) {
+			flex-wrap: wrap;
+		}
 	}
 
 	.editor__block {
@@ -74,6 +96,12 @@
 			font-size: 1em;
 			color: #6a6a6a;
 			padding: 5px;
+		}
+	}
+
+	.editor__block:last-child {
+		@include for-size(phone) {
+			margin-top: 20px;
 		}
 	}
 }
@@ -129,6 +157,31 @@
 		}
 	}
 
+	@include for-size(phone) {
+		padding-top: 32px;
+		padding-bottom: 0;
+		align-items: center;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			"editor__title"
+			"editor__info"
+			"editor__picture";
+
+		.editor__info {
+			grid-area: editor__info;
+			justify-self: start;
+		}
+
+		.editor__title {
+			grid-area: editor__title;
+		}
+
+		.editor__picture {
+			grid-area: editor__picture;
+			justify-self: end;
+		}
+	}
+
 
 	.editor__info {
 		padding-left: 92px;
@@ -136,6 +189,11 @@
 
 		@include for-size(tablet) {
 			padding-left: 10px;
+		}
+
+		@include for-size(phone) {
+			margin-right: 0;
+			padding-inline: 26px
 		}
 
 		.editor__block {
@@ -146,6 +204,11 @@
 				margin-bottom: 60px;
 			}
 
+			@include for-size(phone) {
+				@include flex(center, center);
+				flex-direction: column;
+			}
+
 			.item-editor__image {
 				@include flex;
 				width: 100%;
@@ -153,6 +216,10 @@
 				@include for-size(tablet) {
 					justify-content: center;
 					width: 50%;
+				}
+
+				@include for-size(phone) {
+					margin-bottom: 27px;
 				}
 			}
 
@@ -171,6 +238,12 @@
 						margin-bottom: 0;
 						line-height: 1.2em;
 					}
+
+					@include for-size(phone) {
+						text-align: center;
+						font-size: 1em;
+						margin-bottom: 14px;
+					}
 				}
 
 				.item-editor__text {
@@ -179,6 +252,12 @@
 					color: $sub-text;
 					font-size: 0.9em;
 					line-height: 1.4em;
+
+
+					@include for-size(phone) {
+						text-align: center;
+						margin-bottom: 38px;
+					}
 				}
 			}
 		}
@@ -186,6 +265,16 @@
 
 		.editor__block:not(:nth-child(1)) {
 			.item-editor__wrap {
+				padding-left: 10px;
+
+				@include for-size(phone) {
+					padding-left: 0;
+				}
+			}
+		}
+
+		.editor__block:first-child {
+			.item-editor__image {
 				padding-left: 10px;
 			}
 		}
@@ -204,10 +293,22 @@
 			font-size: 2.6em;
 			margin-bottom: 52px;
 		}
+
+		@include for-size(phone) {
+			text-align: center;
+			font-size: 2em;
+			line-height: 1.3em;
+			margin-inline: 44px;
+			margin-bottom: 36px;
+		}
 	}
 
 	.editor__picture img {
 		width: 100%;
 		min-height: 519px;
+
+		@include for-size(phone) {
+			margin-top: 26px;
+		}
 	}
 }
