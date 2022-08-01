@@ -21,7 +21,7 @@ const path = {
 	src: {
 		scss: './src/scss/**/*.scss',
 		js: './src/js/**/*.js',
-		img: './src/img/*',
+		img: './src/img/**/*',
 	},
 	dist: {
 		self: './dist/',
