@@ -26,6 +26,8 @@
 	}
 }
 
+//Block with 4 other's blocks
+
 .pricing__block {
 	@include flex(center, normal);
 	padding-bottom: 97px;
@@ -34,10 +36,13 @@
 		margin-right: 15px;
 	}
 
+	//Correct block agency
 	.pricing__wrap:nth-child(3) {
 		max-height: 560px;
 		margin-top: -50px;
 	}
+
+	//finished correct
 
 	.pricing__wrap:nth-child(2) {
 		.wrap__header {
@@ -71,6 +76,8 @@
 	}
 }
 
+//Styles for each block
+
 .pricing__wrap {
 	text-align: center;
 	background-color: rgba(106, 88, 106, 0.6);
@@ -90,7 +97,6 @@
 	}
 
 	.wrap__body {
-
 		.wrap__price {
 			font-family: $main-font;
 			font-weight: 400;
@@ -148,6 +154,8 @@
 			text-transform: uppercase;
 		}
 	}
+
+	//Correct block agency
 
 	.wrap__header-agency {
 		background-color: rgba(60, 41, 63, 0.84);
