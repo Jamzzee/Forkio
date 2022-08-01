@@ -21,13 +21,13 @@ const path = {
 	src: {
 		scss: './src/scss/**/*.scss',
 		js: './src/js/**/*.js',
-		img: './src/img/*',
+		img: './src/img/**/*',
 	},
 	dist: {
 		self: './dist/',
 		css: './dist/css/',
 		js: './dist/js/',
-		img: "./dist/images/",
+		img: "./dist/img/",
 	},
 
 	setEnv() {
@@ -71,6 +71,8 @@ const createImg = () =>
 	.pipe(imageMin())
 	.pipe(gulp.dest(path.dist.img))
 
+	
+
 
 
 //Functions clean and watcher
@@ -98,5 +100,5 @@ const watcher = () => {
 
 // Gulp tasks
 
-gulp.task('dev', gulp.series(createScss, createJs, watcher))
+gulp.task('dev', gulp.series(createScss, createJs,createImg, watcher))
 gulp.task('build', gulp.series(createClean, createScss, createJs, createImg))
