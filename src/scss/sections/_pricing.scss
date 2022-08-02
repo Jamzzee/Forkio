@@ -10,7 +10,10 @@
 	@include for-size(tablet) {
 		padding-top: 90px;
 		padding-bottom: 39px;
-		padding-inline: 103px;
+	}
+
+	@include for-size(phone) {
+		padding-block: 2px 32px;
 	}
 
 	.pricing__title {
@@ -23,6 +26,11 @@
 		@include for-size(tablet) {
 			font-size: 2.6em;
 		}
+
+		@include for-size(phone) {
+			font-size: 1.7em;
+			line-height: 1.6em;
+		}
 	}
 }
 
@@ -32,14 +40,56 @@
 	@include flex(center, normal);
 	padding-bottom: 97px;
 
+	@include for-size(tablet) {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-column-gap: 25px;
+		grid-row-gap: 71px;
+		justify-content: center;
+		justify-items: end;
+		padding-inline: 79px 109px;
+		padding-bottom: 94px;
+	}
+
+	@include for-size(phone) {
+		display: grid;
+		grid-template-columns: 1fr;
+		justify-content: center;
+		justify-items: center;
+		grid-row-gap: 18px;
+		padding-inline: 31px 32px;
+		padding-bottom: 15px;
+	}
+
 	.pricing__wrap:not(:last-child) {
 		margin-right: 15px;
+
+		@include for-size(tablet) {
+			margin-right: 0;
+		}
+
+		@include for-size(phone) {
+			margin-right: 0;
+		}
 	}
 
 	//Correct block agency
 	.pricing__wrap:nth-child(3) {
 		max-height: 560px;
 		margin-top: -50px;
+
+		@include for-size(phone) {
+			max-height: 600px;
+			margin-top: 0;
+		}
+	}
+
+	.pricing__wrap:not(:nth-child(3)) {
+
+		@include for-size(tablet) {
+			max-height: 460px;
+			max-width: 258px;
+		}
 	}
 
 	//finished correct
@@ -51,6 +101,7 @@
 	}
 
 	.pricing__wrap:nth-child(4) {
+
 		.wrap__header {
 			padding-inline: 49px;
 		}
@@ -104,6 +155,11 @@
 			line-height: 1.8em;
 			color: #FFFFFF;
 			text-transform: uppercase;
+
+			@include for-size(phone) {
+				font-size: 3.7em;
+				line-height: 2em;
+			}
 		}
 
 		.wrap__text {
@@ -142,7 +198,7 @@
 			display: inline-block;
 			outline: none;
 			padding: 16px 38px;
-			margin-bottom: 36px;
+			margin-bottom: 39px;
 			background: rgba(255, 255, 255, 0.15);
 			border: none;
 			border-radius: 20px;
@@ -171,6 +227,10 @@
 			font-size: 5.1em;
 			line-height: 1.6em;
 			margin-bottom: 16px;
+
+			@include for-size(phone) {
+				line-height: 1.5em;
+			}
 		}
 
 		.wrap__text-agency {
@@ -183,6 +243,10 @@
 
 		.wrap__btn-agency {
 			margin-bottom: 47px;
+
+			@include for-size(tablet) {
+				margin-bottom: 39px;
+			}
 		}
 	}
 }
