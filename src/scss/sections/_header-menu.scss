@@ -87,7 +87,6 @@ body {
         height: 22px;
         background-color: transparent;
         border: none;
-        position: relative;
     }
 
     &__drop-menu {
@@ -167,6 +166,7 @@ body {
     .header {
         background: #27262A;
         padding: 30px 16px 30px 14px;
+        position: relative;
     }
 
     .header {
