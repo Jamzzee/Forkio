@@ -43,8 +43,6 @@
 .wrapper-button {
     @include flex;
     flex-direction: column;
-    // position: relative;
-    // top: -36px;
 }
 
 .button {
@@ -58,7 +56,6 @@
     font-weight: 700;
     font-size: 21px;
     line-height: 1.2;
-    // margin-bottom: 18px;
     border: 2px solid #8D81AC;
     box-sizing: border-box;
 }
