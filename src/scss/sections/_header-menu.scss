@@ -1,56 +1,63 @@
-body{
+body {
     font-family: 'Montserrat';
 }
 
-.wrapper-header{
+.wrapper-header {
     background-image: url(../../../dist/img/header/heroBg.png);
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.header{
+
+.header {
     @include flex;
     padding: 30px 90px;
     background-color: black;
 
 }
 
-.header{
-    &__logo{
+.header {
+    &__logo {
         @include flex;
         text-decoration: none;
-        color:#8D81AC;
+        color: #8D81AC;
     }
-    &__logo-img{
+
+    &__logo-img {
         width: 41px;
         height: 40px;
         background-image: url(../../../dist/img/header/logo.png);
         background-size: cover;
         background-repeat: no-repeat;
     }
-    &__logo:hover{
+
+    &__logo:hover {
         color: #fff;
     }
-    &__logo:hover &__logo-img{
+
+    &__logo:hover &__logo-img {
         background-image: url(../../../dist/img/header/logoHover.png)
     }
 
-    &__list-menu{
+    &__list-menu {
         @include flex;
         font-weight: 700;
-    font-size: 16px;
-    line-height: 1;
-        color:#8D81AC;
+        font-size: 16px;
+        line-height: 1;
+        color: #8D81AC;
         margin-left: auto;
     }
 
-    &__list-item{
+    &__list-item {
         margin-right: 48px;
         cursor: pointer;
     }
-    &__list-item:hover{
+
+    &__list-item:hover {
         color: #fff;
     }
-    &__logo-text{
+
+    &__logo-text {
         font-family: 'Lato';
         text-transform: uppercase;
         font-weight: 700;
@@ -59,7 +66,7 @@ body{
         margin-left: 18px;
     }
 
-    &__button{
+    &__button {
         font-family: 'Montserrat';
         padding: 10px 20px;
         background-color: #8D81AC;
@@ -68,22 +75,25 @@ body{
         border: 2px solid #8D81AC;
         box-sizing: border-box;
     }
-    &__button:hover{
+
+    &__button:hover {
         background-color: #fff;
         color: #8D81AC;
     }
-    &__modal-btn{
+
+    &__modal-btn {
         display: none;
         width: 22px;
         height: 22px;
         background-color: transparent;
         border: none;
     }
-    &__drop-menu{
+
+    &__drop-menu {
         display: block;
         font-family: 'Montserrat';
         background: #333333;
-        position:absolute;
+        position: absolute;
         top: 99px;
         height: 330px;
         width: 292px;
@@ -91,20 +101,24 @@ body{
         font-size: 26px;
         line-height: 1;
     }
-    &__drop-list{
+
+    &__drop-list {
         color: #fff;
     }
-    &__drop-item{
+
+    &__drop-item {
         padding-left: 38px;
         padding-top: 28px;
         padding-bottom: 22px;
         border-bottom: 3px solid #3B3B3B;
         position: relative;
     }
-    &__drop-item:hover{
+
+    &__drop-item:hover {
         color: #8D81AC;
     }
-    &__drop-item:hover::before{
+
+    &__drop-item:hover::before {
         content: "|";
         width: 8px;
         height: 53px;
@@ -116,56 +130,64 @@ body{
 }
 
 
-@include for-size(tablet){
-    .wrapper-header{
+@include for-size(tablet) {
+    .wrapper-header {
         background-position: center;
     }
-    .header{
+
+    .header {
         position: relative;
         padding: 22px 20px 56px 20px;
         background: #27262A;
 
     }
-    .header{
-        &__list-menu{
+
+    .header {
+        &__list-menu {
             position: absolute;
             bottom: 18%;
         }
-        &__button{
+
+        &__button {
             margin-left: auto;
         }
-        &__list-item:last-child{
+
+        &__list-item:last-child {
             margin-right: 0;
         }
     }
 }
 
-@include for-size(phone){
-    .wrapper-header{
+@include for-size(phone) {
+    .wrapper-header {
         background-position: center;
     }
-    .header{
+
+    .header {
         background: #27262A;
         padding: 30px 16px 30px 14px;
     }
 
-    .header{
-        &__logo-text{
+    .header {
+        &__logo-text {
             display: none;
         }
-        &__button{
+
+        &__button {
             margin-left: auto;
-            margin-right: auto; 
+            margin-right: auto;
         }
-        &__list-menu{
+
+        &__list-menu {
             display: none;
         }
-        &__modal-btn{
+
+        &__modal-btn {
             display: block;
         }
     }
 }
 
-.is-hidden{
+.is-hidden {
     display: none;
 }

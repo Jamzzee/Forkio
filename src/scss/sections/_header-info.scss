@@ -4,46 +4,51 @@
 //     background-size: cover;
 // }
 
-.hero{
+.hero {
     padding-top: 82px;
     padding-bottom: 500px;
     @include flex;
     flex-direction: column;
 }
 
-.hero{
-    &__tittle{
+.hero {
+    &__tittle {
         color: #fff;
         font-weight: 700;
         font-size: 82px;
-        line-height:1;
+        line-height: 1;
         margin-bottom: 20px;
     }
-    &__text{
+
+    &__text {
         font-family: 'Lato';
         font-style: normal;
-        color:#8D81AC;
+        color: #8D81AC;
         font-weight: 400;
         font-size: 30px;
-        line-height:1;
+        line-height: 1;
         margin-bottom: 20px;
     }
-    &__text-version{
+
+    &__text-version {
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
-        line-height:1;
+        line-height: 1;
         color: #848E97;
     }
 }
-.wrapper-button{
+
+.wrapper-button {
     @include flex;
     flex-direction: column;
-    position: relative;
-    top: -36px;
+    // position: relative;
+    // top: -36px;
 }
-.button{
+
+.button {
+    transform: translateY(-50%);
     font-family: 'Montserrat';
     background-color: #8D81AC;
     color: #fff;
@@ -52,51 +57,55 @@
     padding: 24px 62px;
     font-weight: 700;
     font-size: 21px;
-    line-height:1.2;
-    margin-bottom: 18px;
+    line-height: 1.2;
+    // margin-bottom: 18px;
     border: 2px solid #8D81AC;
     box-sizing: border-box;
 }
 
-.button{
-    &__text-period{
+.button {
+    &__text-period {
         font-weight: 400;
         font-size: 14px;
-        line-height:1.14;
+        line-height: 1.14;
         color: #848E97;
-        
+
     }
 }
 
-.button:hover{
+.button:hover {
     background-color: #fff;
     color: #8D81AC;
 
 }
 
-@include for-size(tablet){
-    .wrapper-hero{
+@include for-size(tablet) {
+    .wrapper-hero {
         background-position: center;
     }
-    .hero{
-        &__tittle{
+
+    .hero {
+        &__tittle {
             font-size: 72px;
         }
-        &__text{
+
+        &__text {
             font-size: 24px;
         }
-        &__text-version{
+
+        &__text-version {
             font-size: 14px;
         }
     }
 }
 
-@include for-size(phone){
-    .hero{
-        &__tittle{
+@include for-size(phone) {
+    .hero {
+        &__tittle {
             font-size: 48px;
         }
-        &__text{
+
+        &__text {
             text-align: center;
             font-family: 'Montserrat';
             font-size: 18px;
@@ -104,9 +113,10 @@
             padding: 0 10px;
         }
     }
-    .button{
+
+    .button {
         font-size: 18px;
-        line-height:1.1;
+        line-height: 1.1;
         padding: 12px 28px;
     }
 }
