@@ -13,7 +13,6 @@ body {
     @include flex;
     padding: 30px 90px;
     background-color: black;
-
 }
 
 .header {
@@ -94,12 +93,16 @@ body {
         font-family: 'Montserrat';
         background: #333333;
         position: absolute;
-        top: 99px;
+        top: 100px;
         height: 330px;
         width: 292px;
         font-weight: 400;
         font-size: 26px;
         line-height: 1;
+
+        @media (min-width: 321px) {
+            right: 14px;
+        }
     }
 
     &__drop-list {
