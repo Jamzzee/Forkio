@@ -42,7 +42,7 @@
 
 .wrapper-button {
     @include flex;
-    flex-direction: column;
+
 }
 
 .button {
@@ -74,6 +74,10 @@
     background-color: #fff;
     color: #8D81AC;
 
+}
+.wrapper-text{
+    @include flex;
+    margin-bottom: 66px;
 }
 
 @include for-size(tablet) {
