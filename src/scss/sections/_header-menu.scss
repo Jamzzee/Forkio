@@ -3,7 +3,7 @@ body {
 }
 
 .wrapper-header {
-    background-image: url(../../../dist/img/header/heroBg.png);
+    background-image: url(../img/header/heroBg.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -25,7 +25,7 @@ body {
     &__logo-img {
         width: 41px;
         height: 40px;
-        background-image: url(../../../dist/img/header/logo.png);
+        background-image: url(../img/header/logo.png);
         background-size: cover;
         background-repeat: no-repeat;
     }
@@ -35,7 +35,7 @@ body {
     }
 
     &__logo:hover &__logo-img {
-        background-image: url(../../../dist/img/header/logoHover.png)
+        background-image: url(../img/header/logoHover.png)
     }
 
     &__list-menu {
