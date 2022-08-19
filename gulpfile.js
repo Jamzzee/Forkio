@@ -99,6 +99,5 @@ const watcher = () => {
 }
 
 // Gulp tasks
-
-gulp.task('dev', gulp.series(createScss, createJs,createImg, watcher))
 gulp.task('build', gulp.series(createClean, createScss, createJs, createImg))
+gulp.task('dev', gulp.series(createScss, createJs,createImg, watcher))
