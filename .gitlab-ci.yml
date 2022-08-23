@@ -10,7 +10,7 @@ image: node:4.2.2
 pages:
   cache:
     paths:
-      - node_modules/
+      - dist/
   script:
     - npm install -g brunch
     - brunch build --production
