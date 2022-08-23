@@ -1,0 +1,13 @@
+image: node:latest
+
+pages:
+    stage: deploy
+    script: - npm i
+            - npm run build:production
+            - mv dist public
+
+  artifacts:
+          path: public
+
+          only: - main
+  
